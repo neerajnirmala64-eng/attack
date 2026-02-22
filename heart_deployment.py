@@ -16,7 +16,7 @@ model = joblib.load("rfc_model.pkl")
 st.title("Medical data set!")
 
 age = st.number_input("Age")
-gender = st.number_input("Gender", 0 = "Female",1 = "Male")
+gender = st.number_input("Gender")
 heart_rate = st.number_input("Heart rate", min_value = 0)
 systolic_bp = st.number_input("Systolic blood pressure")
 diastolic_bp = st.number_input("Diastolic blood pressure")
