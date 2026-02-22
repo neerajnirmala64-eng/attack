@@ -36,8 +36,8 @@ input_data = pd.DataFrame([[
 ]], columns=model.feature_names_in_)
 
 if st.button("result"):
-    result = model.predict(input_data)[0]
-    if result == "negative":
-        st.success("Negative")
+    prediction = model.predict(input_data)[0]
+    if prediction == "negative":
+        st.success("Negative-Low Heart Risk")
     else:
-        st.error("Positive")
+        st.error("Positive-High Heart Risk")
