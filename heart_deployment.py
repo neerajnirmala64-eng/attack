@@ -35,7 +35,7 @@ input_data = pd.DataFrame([[
     troponin
 ]], columns=model.feature_names_in_)
 
-if st.button("predict"):
+if st.button("result"):
     result = model.predict(input_data)[0]
     if result == "negative":
         st.success("Negative")
