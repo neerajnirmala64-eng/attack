@@ -7,22 +7,22 @@ Original file is located at
     https://colab.research.google.com/drive/19uIVC-CAXaYpfGI4JdnWtIn-xn3XS5_L
 """
 
-import steamlit as st
+import streamlit as st
 import joblib
+import pandas as pd
 
-model = joblib.load("dtc_model.pkl")
+model = joblib.load("rfc_model.pkl")
 
 st.title("Medical data set!")
 
 age = st.number_input("Age")
-gender = st.number_input("Gender")
-heart_rate = st.number_input("Heart rate")
+gender = st.number_input("Gender", 0 = "Female",1 = "Male")
+heart_rate = st.number_input("Heart rate", min_value = 0)
 systolic_bp = st.number_input("Systolic blood pressure")
 diastolic_bp = st.number_input("Diastolic blood pressure")
 blood_sugar = st.number_input("Blood sugar")
 ck_mb = st.number_input("CK-MB")
 troponin = st.number_input("Troponin")
-result = st.number_input("Result")
 
 input_data = pd.DataFrame([[
     age,
